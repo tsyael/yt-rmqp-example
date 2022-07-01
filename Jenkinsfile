@@ -4,12 +4,6 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('docker-hub-yt')
     }
     stages { 
-        stage('Checkout') {
-            steps{
-                git 'https://github.com/tsyael/yt-rmqp-example.git'               
-            }
-        }
-
         stage('Build docker image') {
             steps {  
                 sh 'docker build -t dockeryt2022/consumer_new:$BUILD_NUMBER .'
