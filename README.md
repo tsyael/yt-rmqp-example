@@ -1,1 +1,0 @@
-# yt-rmqp-example
