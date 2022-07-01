@@ -6,7 +6,8 @@ pipeline {
     stages { 
         stage('Checkout') {
             steps{
-            git 'https://github.com/tsyael/yt-rmqp-example.git'
+                git clone 'https://github.com/tsyael/yt-rmqp-example.git'
+                git checkout main
             }
         }
 
